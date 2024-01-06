@@ -316,4 +316,10 @@ section {
     .home .home-slider .slide .content .h1 {
         font-size: 7rem;
     }
+    .home .home-slider .slide .content h1 {
+        font-size: 5rem;
+    }
+    .home .home-slider .slide .content h3 {
+        font-size: 2.5rem;
+    }
 }
