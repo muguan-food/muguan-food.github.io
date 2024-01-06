@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>木貫Mu Guan 餐廳</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script defer src="./js/index.js"></script>
+</head>
+
+<body>
+    <!--header section start-->
+    <header>
+        <a href="#" class="logo"><img src="./images/muguan.png"></a>
+        <nav class="navbar">
+
+            <a href="#home" class="active">木貫首頁</a>
+            <a href="#menu">木貫菜單</a>
+            <a href="#contact">木貫資訊</a>
+
+        </nav>
+        <div class="icons">
+
+            <i class="fas fa-bars" id="menu"></i>
+            <!--<i class="fas fa-search"></i>-->
+            <a href="https://www.instagram.com/hey_muguan/"><i class="fab fa-instagram"></i></a>
+
+            <a href="https://www.facebook.com/people/%E6%9C%A8%E8%B2%ABMU-GUAN/100083000187985/"><i class="fab fa-facebook-f"></i></a>
+
+        </div>
+    </header>
+    <!--header section end-->
+
+
+    <!--sleder section start -->
+    <div class="home" id="home">
+
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper wrapper">
+                <div class="swiper-slide slide slider1">
+                    <div class="content">
+                        <h1>木貫-涼麵</h1>
+                        <h3>楊家涼麵起源於⼤武町眷村已有40年餘載，將在勝利利星村 以『重生、蛻變』的創新方式，延續傳統，保留最初⼼的味道，結合現代與眷村味蕾，打造不只是涼麵的概念。</h3>
+                        <hr>
+
+                        <h3> 木:其古字形象樹木，上為枝葉 ，下為樹根，最終回歸本鄉本土不分離。
+                        </h3>
+                        <h3>貫:古代為穿錢的繩索，也有出生地含義串連著在屏東密不可分的血脈。
+                        </h3>
+                        <p>以『重生、蛻變』的創新方式，延續傳統，保留最初心的味道</p>
+                    </div>
+                </div>
+                <div class="swiper-slide slide slider2">
+                    <div class="content">
+                        <h1>木貫MuGuan。涼麵是由屏東有名的 </h1>
+                        <h3>楊家涼麵 所延伸出的新品牌， 起初，他們希望紀念家族的根源， 考慮使用「楊」這個姓氏， 而他們卻有了更大膽的想法。 他們希望創造一個能夠跳脫 傳統界線的品牌，將創新融入其中。 於是「木貫」就這樣誕生了，
+                        </h3>
+                        <hr>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <!--sleder section end -->
+
+    <!--menu section start-->
+
+
+    <section class="our-menu" id="menu">
+
+        <h1 class="heading">MuGuan菜單</h1>
+        <center>
+            <h3 class="sub-heading">-MuGuan Offer-</h3>
+        </center>
+        <div class="menu-cintainer"></div>
+    </section>
+
+
+    <!--menu section end-->
+
+
+
+
+
+    <!--footer section start-->
+
+    <section class="footer" id="contact">
+        <img src="./images/logo.png">
+        <div class="container">
+            <div>
+                <h3>關於木貫</h3>
+                <p>涼麵 就是對傳統美食的新詮釋， 將傳統與創新相互結合，讓每一個人來到這裡， 都能夠以不同視角，挖掘出屬於自己對於傳統美食的新體驗
+                </p>
+
+
+            </div>
+            <div>
+
+                <h3>營業時間</h3>
+                <span>平日:11:00~15:00、17:00~20:00</span>
+                <span>假日:11:00~20:00 </span>
+                <h3>公休日</h3>
+                <span>星期一、二</span>
+            </div>
+            <div>
+
+                <h3>聯絡木貫訂位</h3>
+                <span>+ (08) 7320559</span>
+                <span>屏東縣屏東市南京路53號</span>
+
+            </div>
+
+        </div>
+        <p>&copy; 2024 MuGuan Restaurant</p>
+    </section>
+
+
+    <!--footer section end-->
+
+
+    <!--jump to top-->
+
+    <a href="#"><button class="topbtn"><i class="fa-solid fa-angle-up"></i></button></a>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".home-slider", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 7500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+
+            },
+            loop: true,
+        });
+    </script>
+
+    <script type="text/javascript">
+        let menu = document.querySelector("#menu ");
+        let navbar = document.querySelector('.navbar');
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+
+            navbar.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

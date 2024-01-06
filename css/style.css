@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@600;700;800;900&family=Noto+Serif+TC:wght@700&display=swap');
+* {
+    font-family: 'Noto+Sans+HK', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+:root {
+    --customcolor: #D3C1AD;
+    --light-color: #4D3833;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    --black: #000000
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+/*logo img reszie*/
+
+.logo img {
+    height: auto;
+    width: 100px;
+    object-fit: fill;
+    border-radius: 20%;
+}
+
+
+/*navbar style start*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--customcolor);
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+    z-index: 100000;
+}
+
+header .logo img {
+    height: auto;
+}
+
+header .navbar a {
+    display: inline-block;
+    font-size: 1.8rem;
+    padding: 0 5.5rem 0 1.5rem;
+    color: var(--light-color);
+    border: .5rem solid transparent;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    transition: transform 1s;
+    /*border-color: white;*/
+}
+
+header .navbar a:hover {
+    transform: rotate(45deg) !important;
+}
+
+header .navbar a.active,
+header .navbar a:hover {
+    color: #fff;
+    border: .1rem solid rgba(205, 170, 124, 0.2);
+}
+
+header .icons i {
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    background: var(--light-color);
+    text-align: center;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+header .icons i:hover {
+    color: #fff;
+    background: var(--light-color);
+    transform: rotate(360deg);
+}
+
+header .icons #menu {
+    display: none;
+}
+
+
+/*navbar style end*/
+
+
+/*slider style start*/
+
+.home .home-slider .slide {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: flex-start;
+}
+
+.home .home-slider .slider1 {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/eat2.jpg);
+}
+
+.home .home-slider .slider1,
+.slider2 {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home .home-slider .slider2 {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/inner.jpg);
+}
+
+.home .home-slider .slide .content {
+    text-align: left;
+    padding-left: 9rem;
+    padding-top: 0.01rem;
+}
+
+.home .home-slider .slide .content h3 {
+    color: var(--customcolor);
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.home .home-slider .slide .content h1 {
+    color: #e6e7e7;
+    font-size: 7rem;
+}
+
+.home .home-slider .slide .content p {
+    color: #e6e7e7;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    padding: .5rem 0;
+    line-height: 1.5;
+    font-weight: 200;
+}
+
+.swiper-pagination-bullet {
+    background: var(--customcolor) !important;
+    width: 15px!important;
+    height: 15px!important;
+    border-radius: 0!important;
+}
+
+
+/*slider style end*/
+
+
+/*menu style start*/
+
+section {
+    padding: 8rem 9%;
+}
+
+.heading {
+    text-align: center;
+    color: var(--light-color);
+    font-size: 4.5rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+}
+
+.sub-heading {
+    text-align: center;
+    color: var(--light-color);
+    font-size: 2.5rem;
+    padding: .5rem 2rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+    background: var(--customcolor);
+    display: inline-block;
+}
+
+
+/*menu style end*/
+
+
+/*footer style start*/
+
+.footer {
+    background: #333;
+    text-align: center;
+    color: #b2b2b2;
+    font-size: 1.3rem;
+}
+
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 2fr));
+    color: #b2b2b2;
+    grid-gap: 1rem;
+    padding: 4rem 0;
+    border-bottom: 1px solid #b2b2b2;
+}
+
+.footer .container div {
+    padding: 0 7rem;
+}
+
+.footer .container h3 {
+    color: var(--customcolor);
+    font-size: 1.5rem;
+    padding-bottom: .8rem;
+}
+
+.footer .container span {
+    display: block;
+}
+
+.footer img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+/*footer style ends*/
+
+
+/*csutom scrool bar*/
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--customcolor);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--light-color);
+}
+
+
+/*jump to top*/
+
+.topbtn {
+    position: fixed;
+    right: 2%;
+    bottom: 10%;
+    width: 30px;
+    height: 30px;
+    background: var(--customcolor);
+    color: var(--light-color);
+    cursor: pointer;
+}
+
+
+/*media quert*/
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+    header {
+        padding: 1rem 2rem;
+    }
+    header .logo img {
+        height: 7rem;
+    }
+}
+
+@media (max-width:768px) {
+    /* navber style query*/
+    header .logo img {
+        height: 7rem;
+    }
+    header .icons #menu {
+        display: inline-block;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(205, 170, 124, 0.2);
+        border-bottom: .1rem solid rgba(205, 170, 124, 0.2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    header .navbar a {
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: var(--customcolor);
+    }
+    .home .home-slider .slide {
+        align-items: center;
+        height: 80vh;
+    }
+    .home .home-slider .slide .content {
+        padding: 0;
+    }
+    .home .home-slider .slide .content .h1 {
+        font-size: 7rem;
+    }
+}
