@@ -29,7 +29,7 @@ html {
 
 .logo img {
     height: auto;
-    width: 100px;
+    width: 13vh;
     object-fit: fill;
     border-radius: 20%;
 }
@@ -66,13 +66,9 @@ header .navbar a {
     /*border-color: white;*/
 }
 
-header .navbar a:hover {
-    transform: rotate(45deg) !important;
-}
-
 header .navbar a.active,
 header .navbar a:hover {
-    color: #fff;
+    color: #EA5715;
     border: .1rem solid rgba(205, 170, 124, 0.2);
 }
 
@@ -89,9 +85,9 @@ header .icons i {
 }
 
 header .icons i:hover {
-    color: #fff;
+    color: #EA5715;
     background: var(--light-color);
-    transform: rotate(360deg);
+    transform: rotate(45deg);
 }
 
 header .icons #menu {
@@ -100,6 +96,52 @@ header .icons #menu {
 
 
 /*navbar style end*/
+
+
+/*navbar animation style start*/
+
+
+/* Top and Bottom borders go out */
+
+.topBotomBordersOut a:before,
+.topBotomBordersOut a:after {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.topBotomBordersOut a:before {
+    top: -10px;
+    transform: translateY(10px);
+}
+
+.topBotomBordersOut a:after {
+    bottom: -10px;
+    transform: translateY(-10px);
+}
+
+.topBotomBordersOut a:hover:before,
+.topBotomBordersOut a:hover:after {
+    opacity: 0.5;
+    transform: translateY(0px);
+}
+
+.navbar a {
+    color: #FFF;
+    text-decoration: none;
+    margin: 0px 10px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+
+
+/*navbar animation style end*/
 
 
 /*slider style start*/
@@ -284,6 +326,7 @@ section {
     }
     header .icons #menu {
         display: inline-block;
+        transform: rotate(0deg);
     }
     header .navbar {
         position: absolute;
@@ -298,6 +341,10 @@ section {
     }
     header .navbar.active {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        transform-origin: top;
+        transform: translateY(180deg);
+        margin-bottom: 0px;
+        transition: transform .5s ease-in-out, margin-bottom .5s ease-in-out;
     }
     header .navbar a {
         display: block;
@@ -321,5 +368,9 @@ section {
     }
     .home .home-slider .slide .content h3 {
         font-size: 2.5rem;
+    }
+    .topBotomBordersOut a:before,
+    .topBotomBordersOut a:after {
+        all: unset;
     }
 }
